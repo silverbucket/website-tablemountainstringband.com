@@ -9,22 +9,26 @@
 }
 
 html {
-    background-color: rgba(12, 12,12, 1);
+    background-color: rgba(26, 26, 26, 1);
 }
 
-body {
-    color: rgba(208, 208, 208, 1);
+body, .quote {
+    font-size: 1.2rem;
+    color: rgba(175, 175, 175, 1);
 }
 
-strong {
-    color: rgba(208, 208, 208, 1);
+header {
+    padding: 2rem 1rem;
+}
+
+h1, strong {
+    color: rgba(196, 196, 196, 1);
 }
 
 h1 {
     font-family: "Platypi", ui-serif;
     font-weight: bold;
     font-size: 3rem;
-    color: rgba(246, 246, 246, 1);
 }
 
 p {
@@ -34,17 +38,24 @@ p {
 
 .quote {
     font-style: italic;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 footer {
+    font-size: 1rem;
     padding: 1rem 1rem 4rem;
 }
 
-a {
-    color: #0865fe;
+a, a:hover {
+    color: rgba(246, 246, 246, 1);
 }
 
-a:hover {
+.link-text {
+    text-decoration: underline;
+}
+
+.link-text:hover {
     color: #ccbc2f;
 }
 
