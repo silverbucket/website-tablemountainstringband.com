@@ -16,6 +16,10 @@ body {
     color: rgba(208, 208, 208, 1);
 }
 
+strong {
+    color: rgba(208, 208, 208, 1);
+}
+
 h1 {
     font-family: "Platypi", ui-serif;
     font-weight: bold;
