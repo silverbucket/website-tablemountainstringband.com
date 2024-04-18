@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Platypi Italic';
+    src: url('fonts/Platypi-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Platypi';
+    src: url('fonts/Platypi-VariableFont_wght.ttf');
+}
+
+html {
+    background-color: rgba(12, 12,12, 1);
+}
+
+body {
+    color: rgba(208, 208, 208, 1);
+}
+
+h1 {
+    font-family: "Platypi", ui-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgba(246, 246, 246, 1);
+}
+
+p {
+    padding: 1rem;
+    font-family: "Platypi", ui-sans-serif;
+}
+
+.quote {
+    font-style: italic;
+}
+
+footer {
+    padding: 1rem 1rem 4rem;
+}
+
+a {
+    color: #0865fe;
+}
+
+a:hover {
+    color: #ccbc2f;
+}
+
+.icon-text-content {
+    padding-left: 0.5rem;
+}
+
+.czech-version {
+    padding-top: 1rem;
+}
