@@ -8,9 +8,6 @@
     src: url('fonts/Platypi-VariableFont_wght.ttf');
 }
 
-html {
-    background-color: rgba(26, 26, 26, 1);
-}
 
 body, .quote {
     font-size: 1.2rem;
@@ -18,7 +15,34 @@ body, .quote {
 }
 
 header {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem 3rem;
+    text-align: center;
+}
+
+footer {
+    font-size: 1rem;
+    padding: 1rem 0 4rem;
+    margin-left: 1rem;
+}
+
+section {
+    background-color: rgba(26, 26, 26, 1);
+}
+
+.content {
+    padding-top: 4rem;
+}
+
+.about {
+    text-align: justify;
+}
+
+.about-czech {
+    padding-top: 2rem;
+}
+
+#spacer {
+    width: 70px;
 }
 
 h1, strong {
@@ -27,24 +51,20 @@ h1, strong {
 
 h1 {
     font-family: "Platypi", ui-serif;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 3rem;
+    /*text-shadow: 1px 2px 0 white;*/
 }
 
 p {
-    padding: 1rem;
     font-family: "Platypi", ui-sans-serif;
+    padding: 1rem;
 }
 
 .quote {
     font-style: italic;
     font-size: 1rem;
     font-weight: normal;
-}
-
-footer {
-    font-size: 1rem;
-    padding: 1rem 0 4rem;
 }
 
 a, a:hover {
@@ -63,6 +83,3 @@ a, a:hover {
     padding-left: 0.5rem;
 }
 
-.czech-version {
-    padding-top: 1rem;
-}
