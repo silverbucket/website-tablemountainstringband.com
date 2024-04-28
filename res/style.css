@@ -12,6 +12,7 @@
 body, .quote {
     font-size: 1.2rem;
     color: rgba(175, 175, 175, 1);
+    background-color: black;
 }
 
 header {
