@@ -8,11 +8,28 @@
     src: url('fonts/Platypi-VariableFont_wght.ttf');
 }
 
-
-body, .quote {
-    font-size: 1.2rem;
-    color: rgba(175, 175, 175, 1);
+body {
+    font-family: "Platypi", ui-sans-serif;
     background-color: black;
+    font-size: 1.2rem;
+}
+
+body, a, .quote {
+    color: rgba(175, 175, 175, 1);
+}
+
+h1, .link-text {
+    font-family: "Platypi", ui-serif;
+    font-weight: normal;
+}
+
+h1, strong {
+    color: rgba(196, 196, 196, 1);
+}
+
+section {
+    background-color: rgba(26, 26, 26, 1);
+    color: rgba(175, 175, 175, 1);
 }
 
 header {
@@ -24,10 +41,6 @@ footer {
     font-size: 1rem;
     padding: 1rem 0 4rem;
     margin-left: 1rem;
-}
-
-section {
-    background-color: rgba(26, 26, 26, 1);
 }
 
 .content {
@@ -46,19 +59,11 @@ section {
     width: 70px;
 }
 
-h1, strong {
-    color: rgba(196, 196, 196, 1);
-}
-
 h1 {
-    font-family: "Platypi", ui-serif;
-    font-weight: normal;
     font-size: 3rem;
-    /*text-shadow: 1px 2px 0 white;*/
 }
 
 p {
-    font-family: "Platypi", ui-sans-serif;
     padding: 1rem;
 }
 
@@ -68,19 +73,22 @@ p {
     font-weight: normal;
 }
 
-a, a:hover {
-    color: rgba(246, 246, 246, 1);
-}
-
 .link-text {
     text-decoration: underline;
 }
 
 .link-text:hover {
-    color: #ccbc2f;
+    color: rgba(204, 188, 47, 1);
 }
 
 .icon-text-content {
     padding-left: 0.5rem;
 }
 
+.email {
+    padding-left: 0;
+}
+
+.email-icon {
+    padding-right: 0.5rem;
+}
