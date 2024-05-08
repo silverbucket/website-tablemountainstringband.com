@@ -119,6 +119,10 @@ li {
     padding-left: 1rem;
 }
 
+.icon-spacer {
+    padding-right: 1rem;
+}
+
 .btc-input {
     text-overflow: ellipsis;
     background-color: rgba(26, 26, 26, 1);
@@ -129,6 +133,6 @@ li {
     color: rgba(15, 190, 255, 1);
 }
 
-.email-icon {
-    margin-top: 0.5rem;
+.email-address {
+    margin-left: 1rem;
 }
