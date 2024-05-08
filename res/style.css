@@ -8,55 +8,59 @@
     src: url('fonts/Platypi-VariableFont_wght.ttf');
 }
 
+html, black {
+    background-color: black;
+}
+
 body {
     font-family: "Platypi", ui-sans-serif;
-    background-color: black;
     font-size: 1.2rem;
 }
 
-body, a, .quote {
+body, a, .quote, .tabs, .section, .music-icon, .content, .btc-input {
     color: rgba(175, 175, 175, 1);
 }
+
+header {
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+}
+
 
 h1, .link-text {
     font-family: "Platypi", ui-serif;
     font-weight: normal;
 }
 
-h1, strong {
+h1, strong, .card-header-title {
     color: rgba(196, 196, 196, 1);
+    font-weight: 600;
 }
 
-section {
+.tabs {
+    padding-top: 1rem;
+}
+
+.main {
+    display: block;
+    padding: 1rem 2rem;
+}
+
+.card, .footer {
     background-color: rgba(26, 26, 26, 1);
-    color: rgba(175, 175, 175, 1);
+    box-shadow: none;
 }
 
-header {
-    padding: 3rem 1rem 3rem;
-    text-align: center;
+.card-title, .card-content {
+    padding: 1rem;
 }
 
-footer {
-    font-size: 1rem;
-    padding: 1rem 0 4rem;
-    margin-left: 1rem;
-}
-
-.content {
-    padding-top: 4rem;
-}
-
-.about {
+.about-content {
     text-align: justify;
 }
 
-.about-czech {
-    padding-top: 2rem;
-}
-
-#spacer {
-    width: 70px;
+.songkick-contentarea {
+    padding-top: 0;
 }
 
 h1 {
@@ -77,18 +81,54 @@ p {
     text-decoration: underline;
 }
 
-.link-text:hover {
+.icon-text {
+    color: rgba(212, 212, 212, 1);
+}
+
+a:hover, .icon-text:hover {
     color: rgba(204, 188, 47, 1);
 }
 
-.icon-text-content {
-    padding-left: 0.5rem;
+.social {
+    padding-top: 2rem;
+    text-align: center;
 }
 
-.email {
-    padding-left: 0;
+ul, li {
+    list-style-type: none;
+}
+
+li {
+    padding-bottom: 1rem;
+}
+
+.btc-icon {
+    color: rgba(255, 153, 0, 1) !important;
+}
+
+.lightning-icon {
+    color: rgba(124, 19, 246, 1);
+    margin-left: 0.6rem;
+}
+
+.money-icon {
+    color: rgb(12, 215, 118);
+}
+
+.tips-title-spacer {
+    padding-left: 1rem;
+}
+
+.btc-input {
+    text-overflow: ellipsis;
+    background-color: rgba(26, 26, 26, 1);
+    border-color: rgba(175, 175, 175, 0);
+}
+
+.is-active {
+    color: rgba(15, 190, 255, 1);
 }
 
 .email-icon {
-    padding-right: 0.5rem;
+    margin-top: 0.5rem;
 }
