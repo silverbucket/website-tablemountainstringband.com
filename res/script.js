@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // click to copy
+    const copyText = document.getElementById("copy-text");
+    copyText.addEventListener("click", (e) => {
+        e.currentTarget.select();
+        document.execCommand("copy");
+        const textIsCopied = document.getElementById("text-is-copied");
+        textIsCopied.classList.remove('is-hidden');
+    });
+
+    // card toggle
+    const cardToggles = document.getElementsByClassName('card-toggle');
+    for (let i = 0; i < cardToggles.length; i++) {
+        cardToggles[i].addEventListener('click', (e) => {
+            e.currentTarget.parentElement.childNodes[3].classList.toggle('is-hidden-mobile');
+        });
+    }
+
     // Get all language toggle elements
     const langToggles = document.querySelectorAll('.lang-toggle');
     
