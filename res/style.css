@@ -67,7 +67,10 @@ h1, strong, .card-header-title {
 
 .card-title, .card-content {
     padding: 1rem;
-    min-height: 4rem;
+}
+
+.press-kit-content {
+    padding-left: 2rem;
 }
 
 .about-content {
