@@ -41,6 +41,20 @@ h1, strong, .card-header-title {
     padding-top: 1rem;
 }
 
+.tabs a {
+    color: rgba(200, 200, 200, 1);
+}
+
+.tabs a:hover {
+    color: rgba(204, 188, 47, 1);
+    border-bottom-color: rgba(204, 188, 47, 1) !important;
+}
+
+.tabs li.is-active a {
+    color: rgba(204, 188, 47, 1) !important;
+    border-bottom-color: rgba(204, 188, 47, 1) !important;
+}
+
 .main {
     display: block;
     padding: 1rem 2rem;
@@ -53,6 +67,7 @@ h1, strong, .card-header-title {
 
 .card-title, .card-content {
     padding: 1rem;
+    min-height: 4rem;
 }
 
 .about-content {
@@ -130,7 +145,7 @@ li {
 }
 
 .is-active {
-    color: rgba(15, 190, 255, 1);
+    color: rgba(204, 188, 47, 1) !important;
 }
 
 .email-address {

@@ -119,6 +119,34 @@
                         </div>
                     </div>
 
+                    <div class="contact cell is-col-span-1 is-col-span-2-desktop">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon-spacer is-size-5">
+                                        <i class="fa fa-fw fa-envelope"></i>
+                                    </span>
+                                    <span class="lang-en-content">Contact</span>
+                                    <span class="lang-cz-content is-hidden">Kontakt</span>
+                                </p>
+                            </div>
+                            <div class="card-content contact-content">
+                                <ul>
+                                    <li>
+                                        <span class="email-address is-size-5 is-size-7-mobile">
+                                            <a class="link-text"
+                                               aria-label="Email Address"
+                                               target="_blank"
+                                               href="mailto:booking@tablemountainstringband.com">
+                                                booking@tablemountainstringband.com
+                                            </a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tips cell is-col-span-1 is-col-span-2-desktop">
                         <div class="card">
                             <div class="card-header">
@@ -136,9 +164,15 @@
                                 </p>
                             </div>
                             <div class="card-content tips-content">
+                                <div class="content lang-en-content">
+                                    <span>To support our music, please consider a donation</span>
+                                </div>
+                                <div class="content lang-cz-content is-hidden">
+                                    <span>Chcete-li podpořit naši hudbu, zvažte prosím dar</span>
+                                </div>
                                 <ul>
                                     <li>
-                                        <span class="btc-address is-size-7-mobile"
+                                        <span class="btc-address is-size-6-mobile"
                                               rel="https://w3id.org/cc#bitcoin"
                                               href="bitcoin:bc1qu6upl2decekqynrps38w6c62jm93x3w6qk7ffm">
                                             <div class="control has-icons-left has-icons-right">
@@ -167,35 +201,7 @@
                                             <a class="link-text"
                                                aria-label="Lightning Address"
                                                href="lightning:LNURL1DP68GURN8GHJ76M0WDKK7UEWDAEXWTEWWAJKCMPDDDHX7AMW9AKXUATJD3CZ7ARPVFKX2MT0W4H8GCTFDEEHGUNFDENKYCTWVSPM50RU">
-                                                tablemountainstringband@kosmos.org
-                                            </a>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact cell is-col-span-1 is-col-span-2-desktop">
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span class="icon-spacer is-size-5">
-                                        <i class="fa fa-fw fa-envelope"></i>
-                                    </span>
-                                    <span class="lang-en-content">Contact</span>
-                                    <span class="lang-cz-content is-hidden">Kontakt</span>
-                                </p>
-                            </div>
-                            <div class="card-content contact-content">
-                                <ul>
-                                    <li>
-                                        <span class="email-address is-size-5 is-size-7-mobile">
-                                            <a class="link-text"
-                                               aria-label="Email Address"
-                                               target="_blank"
-                                               href="mailto:booking@tablemountainstringband.com">
-                                                booking@tablemountainstringband.com
+                                                Lightning Network 
                                             </a>
                                         </span>
                                     </li>
@@ -245,54 +251,10 @@
 
         <footer class="footer">
             <div class="content has-text-centered is-size-6 is-size-7-mobile">
-                <p><em>© 2024 Table Mountain String Band<br />Design by</em> <a class="link-text" target="_blank" href="https://silverbucket.net">silverbucket.net</a></p>
+                <p><em>© 2024-2025 Table Mountain String Band<br />Design by</em> <a class="link-text" target="_blank" href="https://silverbucket.net">silverbucket.net</a></p>
             </div>
         </footer>
 
-        <script lang="javascript">
-            const langs = ['cz', 'en'];
-
-            document.addEventListener('DOMContentLoaded', () => {
-
-                // click to copy
-                const copyText = document.getElementById("copy-text");
-                copyText.addEventListener("click", (e) => {
-                    e.currentTarget.select();
-                    document.execCommand("copy");
-                    const textIsCopied = document.getElementById("text-is-copied");
-                    textIsCopied.classList.remove('is-hidden');
-                })
-
-                // card toggle
-                const cardToggles = document.getElementsByClassName('card-toggle');
-                for (let i = 0; i < cardToggles.length; i++) {
-                    cardToggles[i].addEventListener('click', (e) => {
-                        e.currentTarget.parentElement.childNodes[3].classList.toggle('is-hidden-mobile');
-                    });
-                }
-
-                // lang toggle
-                const langToggle = document.getElementsByClassName('lang-toggle');
-                for (let i = 0; i < langToggle.length; i++) {
-                    langToggle[i].addEventListener('click', (e) => {
-                        for (const langButton of langToggle) {
-                            langButton.classList.remove('is-active');
-                        }
-                        e.currentTarget.classList.add('is-active');
-                        const selectedLang = e.currentTarget.lastChild.textContent.toLowerCase();
-                        for (const lang of langs) {
-                            const langContent = document.getElementsByClassName(`lang-${lang}-content`);
-                            for (const elem of langContent) {
-                                if (lang === selectedLang) {
-                                    elem.classList.remove('is-hidden');
-                                } else {
-                                    elem.classList.add('is-hidden');
-                                }
-                            }
-                        }
-                    });
-                }
-            });
-        </script>
+        <script src="res/script.js?ver=2024050701"></script>
     </body>
 </html>
