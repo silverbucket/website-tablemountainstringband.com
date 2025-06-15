@@ -48,8 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }); 
 
-document.addEventListener('onbeforeunload', function() {
-    fetch('/logout', {
-        method: 'GET',
-    });
+window.addEventListener('beforeunload', function (e) {
+    navigator.sendBeacon('/logout', { action: 'tab_closed' });
 });
