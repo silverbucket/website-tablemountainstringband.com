@@ -47,3 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 }); 
+
+document.addEventListener('onbeforeunload', function() {
+    fetch('/logout', {
+        method: 'GET',
+    });
+});
