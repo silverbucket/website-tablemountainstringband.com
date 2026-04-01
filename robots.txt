@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /promo/ 
+Disallow: /promo/
+Disallow: /tip/
 Disallow: /logout
 Disallow: /res/
