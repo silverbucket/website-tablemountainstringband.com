@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /busking/
 Disallow: /promo/
 Disallow: /tip/
 Disallow: /logout
