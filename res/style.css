@@ -677,14 +677,16 @@ span.lang-cz-content { display: none; }
 body.lang-cz span.lang-en-content { display: none; }
 body.lang-cz span.lang-cz-content { display: inline; }
 
-/* Stack both languages in about section so switching doesn't shift layout */
+/* Stack both languages in about section so switching doesn't shift layout.
+   Both versions stay in the DOM (display: block !important) and overlap
+   in the same grid cell — the taller one sets the height. */
 .about-text {
     display: grid;
 }
 .about-text > .lang-en-content,
 .about-text > .lang-cz-content {
     grid-area: 1 / 1;
-    display: block;
+    display: block !important;
 }
 .about-text > .lang-cz-content { visibility: hidden; }
 .about-text > .lang-en-content { visibility: visible; }
@@ -696,9 +698,10 @@ body.lang-cz .about-text > .lang-cz-content { visibility: visible; }
 }
 #about > .section-tag > span {
     grid-area: 1 / 1;
+    display: inline !important;
 }
-#about > .section-tag > .lang-cz-content { visibility: hidden; display: inline; }
-#about > .section-tag > .lang-en-content { visibility: visible; display: inline; }
+#about > .section-tag > .lang-cz-content { visibility: hidden; }
+#about > .section-tag > .lang-en-content { visibility: visible; }
 body.lang-cz #about > .section-tag > .lang-en-content { visibility: hidden; }
 body.lang-cz #about > .section-tag > .lang-cz-content { visibility: visible; }
 
