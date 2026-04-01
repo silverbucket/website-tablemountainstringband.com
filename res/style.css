@@ -677,6 +677,20 @@ span.lang-cz-content { display: none; }
 body.lang-cz span.lang-en-content { display: none; }
 body.lang-cz span.lang-cz-content { display: inline; }
 
+/* Stack both languages in about-text so switching doesn't shift layout */
+.about-text {
+    display: grid;
+}
+.about-text > .lang-en-content,
+.about-text > .lang-cz-content {
+    grid-area: 1 / 1;
+    display: block;
+}
+.about-text > .lang-cz-content { visibility: hidden; }
+.about-text > .lang-en-content { visibility: visible; }
+body.lang-cz .about-text > .lang-en-content { visibility: hidden; }
+body.lang-cz .about-text > .lang-cz-content { visibility: visible; }
+
 /* ============================================================
    MOTION
    ============================================================ */
