@@ -728,13 +728,21 @@ body.lang-cz #about > .section-tag > .lang-cz-content { visibility: visible; }
 @media (max-width: 480px) {
     .site-nav {
         padding: 0.8rem 1rem;
+        flex-wrap: wrap;
     }
     .nav-links {
-        gap: 0.8rem;
+        gap: 0.6rem;
+        order: 2;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 0.3rem;
     }
     .nav-links a {
         font-size: 0.6rem;
         letter-spacing: 0.08em;
+    }
+    .lang-toggle {
+        margin-left: auto;
     }
     .hero-content {
         padding: 0 1.2rem 2.5rem;
