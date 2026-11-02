@@ -3,4 +3,5 @@ Disallow: /busking/
 Disallow: /promo/
 Disallow: /tip/
 Disallow: /logout
-Disallow: /res/
+
+Sitemap: https://tablemountainstringband.com/sitemap.xml

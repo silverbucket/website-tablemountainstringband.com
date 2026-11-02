@@ -30,6 +30,16 @@
     --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* --- Inline SVG icons (replaces the Fork Awesome icon font) --- */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+    overflow: visible;
+}
+
 /* --- Reset --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -360,6 +370,51 @@ em { font-style: italic; }
     padding: 2rem;
     border: 1px solid rgba(255,255,255,0.04);
 }
+.shows-list { display: flex; flex-direction: column; }
+.show {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    scroll-margin-top: 6rem;
+}
+.show:first-child { padding-top: 0; }
+.show:last-child { border-bottom: none; padding-bottom: 0; }
+.show:target .show-venue { color: var(--accent); }
+.show-date {
+    flex: 0 0 4.5rem;
+    text-align: center;
+    font-family: var(--font-head);
+    line-height: 1.1;
+}
+.show-day { display: block; font-size: 2rem; font-weight: 300; color: var(--text-bright); }
+.show-month { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); }
+.show-info { flex: 1; min-width: 0; }
+.show-venue { font-size: 1.15rem; font-weight: 400; color: var(--text-bright); margin: 0; }
+.show-meta { font-size: 0.9rem; color: var(--text-dim); margin: 0; }
+.show-link {
+    font-family: var(--font-head);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+}
+.show-link:hover { color: var(--text-bright); border-color: var(--accent); }
+.shows-empty { color: var(--text-dim); }
+.shows-more { margin-top: 1.5rem; font-size: 0.9rem; }
+.shows-more a { color: var(--text-dim); border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
+.shows-more a:hover { color: var(--text-bright); border-color: var(--accent); }
+@media (max-width: 480px) {
+    .show { flex-wrap: wrap; gap: 0.75rem 1rem; }
+    .show-link { margin-left: 5.5rem; }
+}
 
 /* ============================================================
    CONTACT
@@ -580,14 +635,16 @@ em { font-style: italic; }
     color: var(--text-bright);
 }
 
-.tip-method i { font-size: 1.2rem; width: 1.5rem; text-align: center; }
+.tip-method .method-icon { font-size: 1.2rem; width: 1.5rem; flex-shrink: 0; }
 .tip-method .method-label { flex: 1; }
-.tip-method .method-arrow { color: var(--text-dim); font-size: 0.75rem; }
+.tip-method .method-arrow { color: var(--text-dim); font-size: 0.75rem; display: inline-flex; }
+.tip-method .method-arrow .icon { transition: transform 0.25s var(--ease); }
+.tip-method.is-open .method-arrow .icon { transform: rotate(180deg); }
 
-.tip-method.revolut i { color: #0075eb; }
-.tip-method.bank i { color: var(--green); }
-.tip-method.btc i { color: #f7931a; }
-.tip-method.lightning i { color: #a855f7; }
+.tip-method.revolut .method-icon { color: #0075eb; }
+.tip-method.bank .method-icon { color: var(--green); }
+.tip-method.btc .method-icon { color: #f7931a; }
+.tip-method.lightning .method-icon { color: #a855f7; }
 
 .tip-detail {
     display: none;
@@ -636,6 +693,9 @@ em { font-style: italic; }
 }
 .copy-btn:hover { color: var(--text-bright); transform: scale(1.15); }
 .copy-btn.copied { color: var(--green); }
+.copy-btn .icon-check,
+.copy-btn.copied .icon-clipboard { display: none; }
+.copy-btn.copied .icon-check { display: inline-block; }
 
 .tip-footer {
     margin-top: auto;
