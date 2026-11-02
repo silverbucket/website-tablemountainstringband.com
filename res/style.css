@@ -370,50 +370,6 @@ em { font-style: italic; }
     padding: 2rem;
     border: 1px solid rgba(255,255,255,0.04);
 }
-.shows-list { display: flex; flex-direction: column; }
-.show {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    scroll-margin-top: 6rem;
-}
-.show:first-child { padding-top: 0; }
-.show:last-child { border-bottom: none; padding-bottom: 0; }
-.show:target .show-venue { color: var(--accent); }
-.show-date {
-    flex: 0 0 4.5rem;
-    text-align: center;
-    font-family: var(--font-head);
-    line-height: 1.1;
-}
-.show-day { display: block; font-size: 2rem; font-weight: 300; color: var(--text-bright); }
-.show-month { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); }
-.show-info { flex: 1; min-width: 0; }
-.show-venue { font-size: 1.15rem; font-weight: 400; color: var(--text-bright); margin: 0; }
-.show-meta { font-size: 0.9rem; color: var(--text-dim); margin: 0; }
-.show-link {
-    font-family: var(--font-head);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 999px;
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-    transition: color 0.2s, border-color 0.2s;
-}
-.show-link:hover { color: var(--text-bright); border-color: var(--accent); }
-.shows-empty { color: var(--text-dim); }
-.shows-list + .songkick-widget { margin-top: 2rem; }
-@media (max-width: 480px) {
-    .show { flex-wrap: wrap; gap: 0.75rem 1rem; }
-    .show-link { margin-left: 5.5rem; }
-}
-
 /* ============================================================
    CONTACT
    ============================================================ */
