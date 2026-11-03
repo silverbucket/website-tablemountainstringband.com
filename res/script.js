@@ -42,15 +42,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Close other open panels
             document.querySelectorAll('.tip-detail.is-open').forEach(d => {
-                if (d.id !== targetId) d.classList.remove('is-open');
+                if (d.id !== targetId) {
+                    d.classList.remove('is-open');
+                    const otherBtn = document.querySelector(`[data-expand="${d.id}"]`);
+                    if (otherBtn) otherBtn.classList.remove('is-open');
+                }
             });
 
             detail.classList.toggle('is-open');
-            const arrow = this.querySelector('.method-arrow i');
-            if (arrow) {
-                arrow.classList.toggle('fa-angle-down', !detail.classList.contains('is-open'));
-                arrow.classList.toggle('fa-angle-up', detail.classList.contains('is-open'));
-            }
+            this.classList.toggle('is-open', detail.classList.contains('is-open'));
         });
     });
 
@@ -63,15 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const text = target.textContent.trim();
 
             navigator.clipboard.writeText(text).then(() => {
-                const icon = this.querySelector('i');
-                icon.classList.remove('fa-clipboard');
-                icon.classList.add('fa-check');
                 this.classList.add('copied');
-                setTimeout(() => {
-                    icon.classList.remove('fa-check');
-                    icon.classList.add('fa-clipboard');
-                    this.classList.remove('copied');
-                }, 2000);
+                setTimeout(() => this.classList.remove('copied'), 2000);
             });
         });
     });

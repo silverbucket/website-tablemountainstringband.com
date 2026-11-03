@@ -30,6 +30,16 @@
     --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* --- Inline SVG icons (replaces the Fork Awesome icon font) --- */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+    overflow: visible;
+}
+
 /* --- Reset --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -580,14 +590,16 @@ em { font-style: italic; }
     color: var(--text-bright);
 }
 
-.tip-method i { font-size: 1.2rem; width: 1.5rem; text-align: center; }
+.tip-method .method-icon { font-size: 1.2rem; width: 1.5rem; flex-shrink: 0; }
 .tip-method .method-label { flex: 1; }
-.tip-method .method-arrow { color: var(--text-dim); font-size: 0.75rem; }
+.tip-method .method-arrow { color: var(--text-dim); font-size: 0.75rem; display: inline-flex; }
+.tip-method .method-arrow .icon { transition: transform 0.25s var(--ease); }
+.tip-method.is-open .method-arrow .icon { transform: rotate(180deg); }
 
-.tip-method.revolut i { color: #0075eb; }
-.tip-method.bank i { color: var(--green); }
-.tip-method.btc i { color: #f7931a; }
-.tip-method.lightning i { color: #a855f7; }
+.tip-method.revolut .method-icon { color: #0075eb; }
+.tip-method.bank .method-icon { color: var(--green); }
+.tip-method.btc .method-icon { color: #f7931a; }
+.tip-method.lightning .method-icon { color: #a855f7; }
 
 .tip-detail {
     display: none;
@@ -636,6 +648,9 @@ em { font-style: italic; }
 }
 .copy-btn:hover { color: var(--text-bright); transform: scale(1.15); }
 .copy-btn.copied { color: var(--green); }
+.copy-btn .icon-check,
+.copy-btn.copied .icon-clipboard { display: none; }
+.copy-btn.copied .icon-check { display: inline-block; }
 
 .tip-footer {
     margin-top: auto;
